@@ -1,7 +1,12 @@
-# a rusty [muffin.tin](https://github.com/apple-fritter/muffin.tin)
-## Bash script and the Rust implementation:
-### Simplicity and Ease of Use:
-Both the bash script and the Rust implementation are designed to achieve the same goal of extracting data from an SQLite database and outputting it to XML files.
+# a rusty muffin.tin
+## Purpose
+Both the bash script and the Rust implementation of [muffin.tin](https://github.com/apple-fritter/muffin.tin) are designed to achieve the same goal of extracting data from an SQLite database and outputting it to XML files.
+- Prompts the user to enter the path to the places file or automatically searches for it in the default Firefox profile directory if no path is provided.
+- Establishes a connection to the SQLite database using the `rusqlite` crate.
+- Retrieves a list of tables in the database by executing an SQL query.
+- Sets the output mode to XML using the `.mode xml` command.
+- Loops over each table and outputs its contents to a separate XML file.
+
 ### User Input:
 Both scripts prompt the user for input, specifically the path to the places file, and provide the option to automatically search for it in the default Firefox profile directory.
 ### Output Mode:
